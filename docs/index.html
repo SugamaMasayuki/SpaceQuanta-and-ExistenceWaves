@@ -36,6 +36,22 @@
             font-size: 1.1rem;
             opacity: 0.9;
         }
+        .header-nav {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
         .section {
             background: white;
             margin-bottom: 2rem;
@@ -106,6 +122,77 @@
             font-weight: bold;
             margin-top: 1rem;
         }
+        .coverage-table-container {
+            margin-bottom: 2rem;
+        }
+        .coverage-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        .coverage-table th,
+        .coverage-table td {
+            padding: 0.8rem 0.5rem;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        .coverage-table th {
+            background-color: #4a5568;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+            line-height: 1.2;
+        }
+        .coverage-table tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        .coverage-table tbody tr:hover {
+            background-color: #edf2f7;
+        }
+        .coverage-table td {
+            vertical-align: middle;
+        }
+        .main-topic, .related-topic {
+            margin: 0 auto;
+        }
+        .main-topic {
+            background-color: #48bb78;
+            color: white;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            line-height: 25px;
+            text-align: center;
+        }
+        .related-topic {
+            background-color: #ed8936;
+            color: white;
+            font-weight: bold;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            line-height: 25px;
+            text-align: center;
+        }
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f8fafc;
+            border-radius: 8px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -116,6 +203,16 @@
             .section {
                 padding: 1.5rem;
             }
+            .coverage-table {
+                font-size: 0.8rem;
+            }
+            .coverage-table th,
+            .coverage-table td {
+                padding: 0.6rem 0.3rem;
+            }
+            .legend {
+                gap: 1rem;
+            }
         }
     </style>
 </head>
@@ -124,6 +221,10 @@
         <header>
             <h1>空間子と存在波理論</h1>
             <div class="subtitle">Space Quanta and Existence Waves Theory</div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">ホーム</a>
+                <a href="about.html" class="nav-link">著者について</a>
+            </nav>
         </header>
 
         <section class="section">
@@ -146,7 +247,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-title">概念的ガードレール機能</div>
-                    <p>既存理論の数学的成功を認めつつ、その適用限界と物理的意味を明確化</p>
+                    <p>統一的物理モデルに基づき、数式の適用限界と解釈の物理的意味を与えることを可能にする</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-title">統一的説明</div>
@@ -154,7 +255,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-title">既存問題の解決</div>
-                    <p>現代物理学の概念的矛盾（基底状態の循環論法、仮想粒子の論理的困難、時間遅れの統一的説明欠如等）を解決</p>
+                    <p><a href="physics_contradictions.html">現代物理学の概念的矛盾</a>を解決</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-title">科学哲学的意義</div>
@@ -165,6 +266,107 @@
 
         <section class="section">
             <h2>プレプリント論文</h2>
+            <div class="coverage-table-container">
+                <h3>各論文の扱う範囲</h3>
+                <div style="overflow-x: auto; margin-bottom: 2rem;">
+                    <table class="coverage-table">
+                        <thead>
+                            <tr>
+                                <th>論文</th>
+                                <th>空間・<br>構造</th>
+                                <th>時間</th>
+                                <th>光・<br>質量波<br>(伝播)</th>
+                                <th>作用・<br>運動</th>
+                                <th>原型</th>
+                                <th>陽子・<br>電子・<br>中性子</th>
+                                <th>原子・<br>分子</th>
+                                <th>宇宙</th>
+                                <th>位置づけ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>第一論文</td>
+                                <td><span class="related-topic">△</span></td>
+                                <td>×</td>
+                                <td><span class="related-topic">△</span></td>
+                                <td><span class="related-topic">△</span></td>
+                                <td><span class="related-topic">△</span></td>
+                                <td>×</td>
+                                <td>×</td>
+                                <td><span class="related-topic">△</span></td>
+                                <td>概念の全体像</td>
+                            </tr>
+                            <tr>
+                                <td>第二論文</td>
+                                <td><span class="related-topic">△</span></td>
+                                <td><span class="main-topic">○</span></td>
+                                <td><span class="main-topic">○</span></td>
+                                <td>×</td>
+                                <td>×</td>
+                                <td>×</td>
+                                <td>×</td>
+                                <td>×</td>
+                                <td>相対論の再解釈</td>
+                            </tr>
+                            <tr>
+                                <td>第三論文</td>
+                                <td><span class="main-topic">○</span></td>
+                                <td>×</td>
+                                <td><span class="related-topic">△</span></td>
+                                <td>×</td>
+                                <td><span class="related-topic">△</span></td>
+                                <td><span class="main-topic">○</span></td>
+                                <td>×</td>
+                                <td>×</td>
+                                <td>量子力学の再解釈</td>
+                            </tr>
+                            <tr>
+                                <td>第四論文</td>
+                                <td>×</td>
+                                <td>×</td>
+                                <td><span class="related-topic">△</span></td>
+                                <td>×</td>
+                                <td><span class="main-topic">○</span></td>
+                                <td><span class="related-topic">△</span></td>
+                                <td><span class="related-topic">△</span></td>
+                                <td><span class="related-topic">△</span></td>
+                                <td>原型と物質</td>
+                            </tr>
+                            <tr>
+                                <td>第五論文</td>
+                                <td><span class="related-topic">△</span></td>
+                                <td>×</td>
+                                <td><span class="main-topic">○</span></td>
+                                <td><span class="main-topic">○</span></td>
+                                <td>×</td>
+                                <td>×</td>
+                                <td>×</td>
+                                <td><span class="related-topic">△</span></td>
+                                <td>重力と運動</td>
+                            </tr>
+                            <tr>
+                                <td>第六論文</td>
+                                <td>×</td>
+                                <td>×</td>
+                                <td><span class="related-topic">△</span></td>
+                                <td><span class="main-topic">○</span></td>
+                                <td><span class="related-topic">△</span></td>
+                                <td><span class="main-topic">○</span></td>
+                                <td><span class="main-topic">○</span></td>
+                                <td>×</td>
+                                <td>物質と量子現象</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="legend">
+                    <span class="legend-item"><span class="main-topic">○</span> 主要テーマ</span>
+                    <span class="legend-item"><span class="related-topic">△</span> 関連内容</span>
+                    <span class="legend-item">× 扱わず</span>
+                </div>
+            </div>
+
             <ul class="papers-list">
                 <li>
                     <div class="paper-title">第一論文：現代物理学の概念的基盤の再構築</div>
@@ -173,7 +375,7 @@
                 </li>
                 <li>
                     <div class="paper-title">第二論文：時空と質量の由来</div>
-                    <p>座標系の恣意性と、従来特殊相対性理論と一般相対性理論で整合しない説明であった時間現象を空間子理論で統一的に説明。</p>
+                    <p>座標系の恣意性と、従来特殊相対性理論と一般相対性理論で整合しない説明であった時間現象を空間子理論で統一的に説明する。</p>
                     <a href="https://doi.org/10.5281/zenodo.15878825" class="paper-link">Zenodo DOI: 10.5281/zenodo.15878825</a>
                 </li>
                 <li>
