@@ -3,158 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>空間子と存在波理論 | Space Quanta and Existence Waves Theory</title>
+    <title>空間子と存在波理論 - 須釜正行</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f5f7fa;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+            line-height: 1.6;
             color: #333;
+            background-color: #f9f9f9;
         }
+
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
+
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4a90a4, #5fb3c8);
             color: white;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-        }
-        h1 {
             text-align: center;
-            margin: 0;
-            font-size: 2.5rem;
+            padding: 40px 0;
+            margin-bottom: 40px;
         }
-        .subtitle {
-            text-align: center;
-            margin-top: 0.5rem;
-            font-size: 1.1rem;
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        header .subtitle {
+            font-size: 1.2em;
             opacity: 0.9;
+            margin-bottom: 20px;
         }
-        .header-nav {
-            text-align: center;
-            margin-top: 1.5rem;
+
+        .author-info {
+            font-size: 1em;
+            margin-top: 20px;
         }
-        .nav-link {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            text-decoration: none;
-        }
-        .section {
+
+        nav {
             background: white;
-            margin-bottom: 2rem;
-            padding: 2rem;
+            padding: 15px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4a90a4;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #e8f4f7;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
+
         h2 {
-            color: #4a5568;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
+            color: #4a90a4;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #5fb3c8;
+            padding-bottom: 10px;
         }
-        .theory-overview {
-            font-size: 1.1rem;
-            text-align: justify;
+
+        h3 {
+            color: #2c5f6e;
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
         }
-        .features-grid {
+
+        .key-concepts {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            gap: 20px;
+            margin: 20px 0;
         }
-        .feature-card {
-            background: #f8fafc;
-            padding: 1.5rem;
+
+        .concept-card {
+            background: #f0f8fa;
+            padding: 20px;
             border-radius: 8px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #5fb3c8;
         }
-        .feature-title {
-            font-weight: bold;
-            color: #4a5568;
-            margin-bottom: 0.5rem;
+
+        .concept-card h4 {
+            color: #2c5f6e;
+            margin-bottom: 10px;
         }
-        .papers-list {
-            list-style: none;
-            padding: 0;
+
+        .highlight {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
         }
-        .papers-list li {
-            background: #f8fafc;
-            margin-bottom: 1rem;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #38a169;
-        }
-        .paper-title {
-            font-weight: bold;
-            color: #2d3748;
-            margin-bottom: 0.5rem;
-        }
-        .paper-link {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .paper-link:hover {
-            text-decoration: underline;
-        }
+
         .contact-info {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
+            background: #e8f4f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
-        .contact-email {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-top: 1rem;
-        }
-        .coverage-table-container {
-            margin-bottom: 2rem;
-        }
-        .coverage-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-            font-size: 0.9rem;
-        }
-        .coverage-table th,
-        .coverage-table td {
-            padding: 0.8rem 0.5rem;
-            text-align: center;
-            border: 1px solid #e2e8f0;
-        }
-        .coverage-table th {
-            background-color: #4a5568;
-            color: white;
-            font-weight: bold;
-            font-size: 0.8rem;
-            line-height: 1.2;
-        }
-        .coverage-table tbody tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
-        .coverage-table tbody tr:hover {
-            background-color: #edf2f7;
-        }
-        .coverage-table td {
-            vertical-align: middle;
-        }
-        .main-topic, .related-topic {
-            margin: 0 auto;
+
+        .contact-info h3 {
+            margin-top: 0;
         }
         .main-topic {
             background-color: #48bb78;
@@ -175,238 +161,303 @@
             height: 25px;
             display: inline-block;
             line-height: 25px;
+        }
+        footer {
             text-align: center;
+            padding: 30px 0;
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
         }
-        .legend {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 1rem;
-            padding: 1rem;
-            background-color: #f8fafc;
+
+        .presentation-info {
+            background: #d1ecf1;
+            border: 1px solid #b8daff;
             border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
         }
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
+
+        .presentation-info h4 {
+            color: #0c5460;
+            margin-bottom: 10px;
         }
+
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
+            header h1 {
+                font-size: 2em;
             }
-            .container {
-                padding: 10px;
+            
+            nav ul {
+                flex-direction: column;
+                text-align: center;
             }
-            .section {
-                padding: 1.5rem;
+            
+            nav li {
+                margin: 5px 0;
             }
-            .coverage-table {
-                font-size: 0.8rem;
-            }
-            .coverage-table th,
-            .coverage-table td {
-                padding: 0.6rem 0.3rem;
-            }
-            .legend {
-                gap: 1rem;
+            
+            section {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <header>
+        <div class="container">
             <h1>空間子と存在波理論</h1>
-            <div class="subtitle">Space Quanta and Existence Waves Theory</div>
-            <nav class="header-nav">
-                <a href="index.html" class="nav-link">ホーム</a>
-                <a href="about.html" class="nav-link">著者について</a>
-            </nav>
-        </header>
-
-        <section class="section">
-            <h2>理論概要</h2>
-            <div class="theory-overview">
-                <p>空間子と存在波理論は、現代物理学の概念的困難を解決する統一的な理論枠組みです。空間そのものを実現する基本単位である「空間子」、その上に形成される「存在波」、そして存在波の基本パターンを決める「原型」という三つの概念を基盤とします。</p>
-                
-                <p>この理論は、従来の「物質が力を発生させる」という能動的理解から「空間子が物体を移動させる」という受動的理解への根本的転換を提案します。重力、電磁相互作用、時間遅れ現象、原子の安定性など、現代物理学が個別に扱ってきた現象を、空間子環境[l<sub>p</sub>, t<sub>p</sub>, Sp]を用いて統一的なメカニズムから説明します。</p>
-                
-                <p>従来「原理」として受け入れられてきた法則も、空間子ネットワークの情報処理能力という物理的実在から導出されます。これにより、現代物理学の「数式の奴隷」状態から脱却し、「物の理」を理解する本来の物理学への回帰を目指します。</p>
+            <p class="subtitle">Space Quantum and Existence Wave Theory</p>
+            <p class="subtitle">～数学的成功から物理的理解へ～</p>
+            <div class="author-info">
+                <strong>須釜正行（すがま まさゆき）</strong><br>
             </div>
-        </section>
+        </div>
+    </header>
 
-        <section class="section">
-            <h2>理論の特徴</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-title">数式的互換性</div>
-                    <p>既存の物理法則と数学的に整合し、同じ予測結果を提供</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-title">概念的ガードレール機能</div>
-                    <p>統一的物理モデルに基づき、数式の適用限界と解釈の物理的意味を与えることを可能にする</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-title">統一的説明</div>
-                    <p>ミクロからマクロ、素粒子から宇宙論まで、単一の概念基盤から一貫した説明を提供</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-title">既存問題の解決</div>
-                    <p><a href="physics_contradictions.html">現代物理学の概念的矛盾</a>を解決</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-title">科学哲学的意義</div>
-                    <p>数学的形式主義への過度の依存から脱却し、物理現象の本質的理解への回帰を促進</p>
-                </div>
-            </div>
-        </section>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">研究概要</a></li>
+                <li><a href="#theory">理論の核心</a></li>
+                <li><a href="#publications">論文・資料</a></li>
+                <li><a href="#contact">連絡先</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <section class="section">
-            <h2>プレプリント論文</h2>
-            <div class="coverage-table-container">
-                <h3>各論文の扱う範囲</h3>
-                <div style="overflow-x: auto; margin-bottom: 2rem;">
-                    <table class="coverage-table">
-                        <thead>
-                            <tr>
-                                <th>論文</th>
-                                <th>空間・<br>構造</th>
-                                <th>時間</th>
-                                <th>光・<br>質量波<br>(伝播)</th>
-                                <th>作用・<br>運動</th>
-                                <th>原型</th>
-                                <th>陽子・<br>電子・<br>中性子</th>
-                                <th>原子・<br>分子</th>
-                                <th>宇宙</th>
-                                <th>位置づけ</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>第一論文</td>
-                                <td><span class="related-topic">△</span></td>
-                                <td>×</td>
-                                <td><span class="related-topic">△</span></td>
-                                <td><span class="related-topic">△</span></td>
-                                <td><span class="related-topic">△</span></td>
-                                <td>×</td>
-                                <td>×</td>
-                                <td><span class="related-topic">△</span></td>
-                                <td>概念の全体像</td>
-                            </tr>
-                            <tr>
-                                <td>第二論文</td>
-                                <td><span class="related-topic">△</span></td>
-                                <td><span class="main-topic">○</span></td>
-                                <td><span class="main-topic">○</span></td>
-                                <td>×</td>
-                                <td>×</td>
-                                <td>×</td>
-                                <td>×</td>
-                                <td>×</td>
-                                <td>相対論の再解釈</td>
-                            </tr>
-                            <tr>
-                                <td>第三論文</td>
-                                <td><span class="main-topic">○</span></td>
-                                <td>×</td>
-                                <td><span class="related-topic">△</span></td>
-                                <td>×</td>
-                                <td><span class="related-topic">△</span></td>
-                                <td><span class="main-topic">○</span></td>
-                                <td>×</td>
-                                <td>×</td>
-                                <td>量子力学の再解釈</td>
-                            </tr>
-                            <tr>
-                                <td>第四論文</td>
-                                <td>×</td>
-                                <td>×</td>
-                                <td><span class="related-topic">△</span></td>
-                                <td>×</td>
-                                <td><span class="main-topic">○</span></td>
-                                <td><span class="related-topic">△</span></td>
-                                <td><span class="related-topic">△</span></td>
-                                <td><span class="related-topic">△</span></td>
-                                <td>原型と物質</td>
-                            </tr>
-                            <tr>
-                                <td>第五論文</td>
-                                <td><span class="related-topic">△</span></td>
-                                <td>×</td>
-                                <td><span class="main-topic">○</span></td>
-                                <td><span class="main-topic">○</span></td>
-                                <td>×</td>
-                                <td>×</td>
-                                <td>×</td>
-                                <td><span class="related-topic">△</span></td>
-                                <td>重力と運動</td>
-                            </tr>
-                            <tr>
-                                <td>第六論文</td>
-                                <td>×</td>
-                                <td>×</td>
-                                <td><span class="related-topic">△</span></td>
-                                <td><span class="main-topic">○</span></td>
-                                <td><span class="related-topic">△</span></td>
-                                <td><span class="main-topic">○</span></td>
-                                <td><span class="main-topic">○</span></td>
-                                <td>×</td>
-                                <td>物質と量子現象</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="legend">
-                    <span class="legend-item"><span class="main-topic">○</span> 主要テーマ</span>
-                    <span class="legend-item"><span class="related-topic">△</span> 関連内容</span>
-                    <span class="legend-item">× 扱わず</span>
-                </div>
+    <div class="container">
+        <section id="about">
+            <h2>研究概要</h2>
+            <p>現代物理学は数学的に極めて精密な記述と驚異的な予測能力を獲得しましたが、その成功の陰で「なぜそうなるのか」という根本的理解が置き去りにされてきました。本研究では、この概念的危機を解決するための新しい物理的枠組みとして「空間子と存在波理論」を提案します。</p>
+
+            <div class="highlight">
+                <strong>研究の目的：</strong>現代物理学の「数式唯一主義」から脱却し、統一的な物理的描像による根本的理解を実現する
             </div>
 
-            <ul class="papers-list">
-                <li>
-                    <div class="paper-title">第一論文：現代物理学の概念的基盤の再構築</div>
-                    <p>空間子、存在波、原型の基本概念を定義し、プランク単位系との関係を明確化。ミクロからマクロ、宇宙論までを浅く広く論じる。</p>
-                    <a href="https://doi.org/10.5281/zenodo.15861248" class="paper-link">Zenodo DOI: 10.5281/zenodo.15861248</a>
-                </li>
-                <li>
-                    <div class="paper-title">第二論文：時空と質量の由来</div>
-                    <p>座標系の恣意性と、従来特殊相対性理論と一般相対性理論で整合しない説明であった時間現象を空間子理論で統一的に説明する。</p>
-                    <a href="https://doi.org/10.5281/zenodo.15878825" class="paper-link">Zenodo DOI: 10.5281/zenodo.15878825</a>
-                </li>
-                <li>
-                    <div class="paper-title">第三論文：量子力学の再解釈</div>
-                    <p>量子力学の始まりとも言えるプランク定数から、空間子環境の3つ目の要素Spを導出。重力定数Gと合わせて、これらが空間子環境にとっての派生量であることを示す。また、現代の量子力学でもっとも解釈が食い違うベータ崩壊について、存在波理論での説明を提供する。</p>
-                    <a href="https://doi.org/10.5281/zenodo.16500230" class="paper-link">Zenodo DOI: 10.5281/zenodo.16500230</a>
-                </li>
-                <li>
-                    <div class="paper-title">第四論文：磁性構造体と物質の起源</div>
-                    <p>我々人類が物質と呼んでいる存在、その存在の根底を明かす。それを踏まえて、ミクロの現象の力学的調和を論ずる。</p>
-                    <a href="https://doi.org/10.5281/zenodo.16718965" class="paper-link">Zenodo DOI: 10.5281/zenodo.16718965</a>
-                </li>
-                <li>
-                    <div class="paper-title">第五論文：重力現象の空間子理論</div>
-                    <p>力とエネルギー概念を根本的に再検討し、物理学を「仕事量の簿記学」から「物の理」の探求へと回帰させる必要性を論ずる。そしてこれまでの物理学で謎とされてきた重力、その根源に迫る。</p>
-                    <a href="https://doi.org/10.5281/zenodo.16731420" class="paper-link">Zenodo DOI: 10.5281/zenodo.16731420</a>
-                </li>
-                <li>
-                    <div class="paper-title">第六論文：原子物理学と量子力学の統一理論</div>
-                    <p>原子とはどのように成立するものか、原子の構成要素を存在波理論で一つずつ見ていく。また、量子力学黎明期の理論について、空間子と存在波理論で再解釈する。</p>
-                    <a href="https://doi.org/10.5281/zenodo.16744874" class="paper-link">Zenodo DOI: 10.5281/zenodo.16744874</a>
-                </li>
+            <h3>現代物理学の抱える問題</h3>
+            <ul>
+                <li>数学的記述の高度化と引き換えに、物理的メカニズムの理解が失われている</li>
+                <li>量子力学、相対性理論、標準模型などが個別の数式体系として存在し、統一的描像を欠く</li>
+                <li>観測事実を原理化することで生じる概念的矛盾</li>
+                <li>「計算はできるが説明できない」現象の増加</li>
             </ul>
         </section>
 
-        <section class="section contact-info">
-            <h2 style="border-bottom: none; color: white;">お問い合わせ</h2>
-            <p>理論に関するご質問、学術的議論などがございましたら、お気軽にご連絡ください。</p>
-            <div class="contact-email">epresearch2025@gmail.com</div>
+        <section id="theory">
+            <h2>理論の核心</h2>
+            <p>空間子と存在波理論は、物質と空間の本質を再定義することで、現代物理学の諸現象を統一的に説明します。</p>
+
+            <div class="key-concepts">
+                <div class="concept-card">
+                    <h4>空間子（Space Quantum）</h4>
+                    <p>プランク長立方の空間を占有する唯一の実体。情報を保持、伝達、処理する能力を持つ。時間とは空間子が処理する最小時間単位（プランク時間）である。</p>
+                </div>
+
+                <div class="concept-card">
+                    <h4>存在波（Existence Wave）</h4>
+                    <p>空間子上に存在する情報変動。伝播型存在波（光）と集合型存在波（物質）に分類される。物質も光も、すべて空間子上での情報変動に過ぎない。</p>
+                </div>
+
+                <div class="concept-card">
+                    <h4>原型（Archetype）</h4>
+                    <p>集合型存在波が空間上に留まるための特殊な条件。この条件を満たした存在波のみが物質として認識される。物質の安定性と多様性を説明する。</p>
+                </div>
+            </div>
+
+            <h3>理論の統一的説明力</h3>
+            <ul>
+                <li><strong>量子現象：</strong>波動-粒子二重性を観測方法の違いとして統一的に説明</li>
+                <li><strong>相対論的効果：</strong>時間の遅れを空間子の負荷による処理速度の変化として説明</li>
+                <li><strong>質量とエネルギー：</strong>E=mc²を存在波の状態変化として再解釈</li>
+                <li><strong>力の作用：</strong>空間子による情報伝達と移動実行の二層構造で説明</li>
+            </ul>
+
+            <h3>概念的ガードレール機能</h3>
+            <p>本理論は、既存の物理理論に対して「数式以外の判断基準」を提供します：</p>
+            <ul>
+                <li>数式の適用範囲を事前に考察可能</li>
+                <li>物理的メカニズムの妥当性を検証可能</li>
+                <li>「計算はできるが物理的に不合理」な理論を識別可能</li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>論文・資料</h2>
+            
+            <div class="highlight">
+                <h3>論文シリーズ「空間子と存在波理論」</h3>
+                <p>本理論は6つの論文から構成される包括的な理論体系です。各論文は特定の物理現象を扱いながら、統一的な概念基盤を提供しています。</p>
+            </div>
+
+            <h3>論文構成と対象範囲</h3>
+            <div style="overflow-x: auto; margin: 20px 0;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
+                    <thead>
+                        <tr style="background-color: #4a90a4; color: white;">
+                            <th style="border: 1px solid #ddd; padding: 8px;">論文</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">空間・構造</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">時間</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">光・質量波(伝播)</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">作用・運動</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">原型</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">陽子・電子・中性子</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">原子・分子</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">宇宙</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">位置づけ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">第一論文</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">概念の全体像</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">第二論文</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="main-topic">○</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="main-topic">○</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">相対論の再解釈</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">第三論文</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="main-topic">○</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="main-topic">○</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">量子力学の再解釈</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">第四論文</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="main-topic">○</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">原型と物質</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">第五論文</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="main-topic">○</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="main-topic">○</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">重力と運動</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">第六論文</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="main-topic">○</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="related-topic">△</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="main-topic">○</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><span class="main-topic">○</span></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">×</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">物質と量子現象</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>各論文の詳細内容</h3>
+            <div class="key-concepts">
+                <div class="concept-card">
+                    <h4>第一論文：概念の全体像</h4>
+                    <p>空間子、存在波、原型の基本概念を定義し、プランク単位系との関係を明確化。ミクロからマクロ、宇宙論までを浅く広く論じる。</p>
+                    <a href="https://doi.org/10.5281/zenodo.15861248" class="paper-link">Zenodo DOI: 10.5281/zenodo.15861248</a>
+                </div>
+
+                <div class="concept-card">
+                    <h4>第二論文：相対論の再解釈</h4>
+                    <p>座標系の恣意性と、従来特殊相対性理論と一般相対性理論で整合しない説明であった時間現象を空間子理論で統一的に説明する。</p>
+                    <a href="https://doi.org/10.5281/zenodo.15878825" class="paper-link">Zenodo DOI: 10.5281/zenodo.15878825</a>
+                </div>
+
+                <div class="concept-card">
+                    <h4>第三論文：量子力学の再解釈</h4>
+                    <p>量子力学の始まりとも言えるプランク定数から、空間子環境の3つ目の要素Spを導出。重力定数Gと合わせて、これらが空間子環境にとっての派生量であることを示す。また、現代の量子力学でもっとも解釈が食い違うベータ崩壊について、存在波理論での説明を提供する。</p>
+                    <a href="https://doi.org/10.5281/zenodo.16500230" class="paper-link">Zenodo DOI: 10.5281/zenodo.16500230</a>
+                </div>
+
+                <div class="concept-card">
+                    <h4>第四論文：原型と物質</h4>
+                    <p>我々人類が物質と呼んでいる存在、その存在の根底を明かす。それを踏まえて、ミクロの現象の力学的調和を論ずる。</p>
+                    <a href="https://doi.org/10.5281/zenodo.16718965" class="paper-link">Zenodo DOI: 10.5281/zenodo.16718965</a>
+                </div>
+
+                <div class="concept-card">
+                    <h4>第五論文：重力と運動</h4>
+                    <p>力とエネルギー概念を根本的に再検討し、物理学を「仕事量の簿記学」から「物の理」の探求へと回帰させる必要性を論ずる。そしてこれまでの物理学で謎とされてきた重力、その根源に迫る。</p>
+                    <a href="https://doi.org/10.5281/zenodo.16731420" class="paper-link">Zenodo DOI: 10.5281/zenodo.16731420</a>
+                </div>
+
+                <div class="concept-card">
+                    <h4>第六論文：物質と量子現象</h4>
+                    <p>原子とはどのように成立するものか、原子の構成要素を存在波理論で一つずつ見ていく。また、量子力学黎明期の理論について、空間子と存在波理論で再解釈する。</p>
+                    <a href="https://doi.org/10.5281/zenodo.16744874" class="paper-link">Zenodo DOI: 10.5281/zenodo.16744874</a>
+                </div>
+            </div>
+
+            <h3>理論の特徴</h3>
+            <ul>
+                <li><strong>既存法則との整合性：</strong>既存の物理法則と数学的に整合し、同じ予測結果を提供</li>
+                <li><strong>統一的解釈：</strong>統一的物理モデルに基づき、数式の適用限界と解釈の物理的意味を提供</li>
+                <li><strong>包括的説明力：</strong>ミクロからマクロ、素粒子から宇宙論まで、単一の概念基盤から一貫した説明</li>
+                <li><strong>概念的矛盾の解決：</strong>現代物理学の概念的矛盾を解決</li>
+                <li><strong>本質的理解：</strong>数学的形式主義への過度の依存から脱却し、物理現象の本質的理解への回帰を促進</li>
+            </ul>
+
+        </section>
+
+        <section id="contact">
+            <h2>連絡先・関連情報</h2>
+            
+            <div class="contact-info">
+                <h3>連絡先</h3>
+                <p><strong>Email:</strong>epresearch2025[at]gmail[dot]com<br></p>
+                <p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0003-5476-3230" target="_blank" style="color: #667eea; text-decoration: none;">
+                <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" width=18/>
+                0009-0003-5476-3230</a></p>
+            </div>
+
+            <h3>研究に関するお問い合わせ</h3>
+            <p>空間子と存在波理論に関するご質問、議論がございましたら、お気軽にお声かけください。</p>
+
+            <h3>English Summary</h3>
+            <p><strong>Space Quantum and Existence Wave Theory</strong> proposes a unified physical framework to address the conceptual crisis in modern physics. While physics has achieved remarkable mathematical precision and predictive power, it has lost sight of fundamental understanding of "why" phenomena occur. This theory provides a conceptual foundation that can serve as a "conceptual guardrail" for evaluating existing theories and their interpretations.</p>
         </section>
     </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 須釜正行. All rights reserved.</p>
+            <p>Space Quantum and Existence Wave Theory - From Mathematical Success to Physical Understanding</p>
+        </div>
+    </footer>
 </body>
 </html>
-
