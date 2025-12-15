@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理論の視覚的理解 - 空間子と存在波理論</title>
+    <meta name="description" content="空間子と存在波理論を視覚的に理解するためのインフォグラフィック集。6つの図で理論の核心概念を解説。">
+    <meta name="keywords" content="空間子,存在波,インフォグラフィック,視覚的理解,物理学,量子力学,相対論">
+    <meta name="author" content="須釜正行 Masayuki Sugama">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #f8f8f8;
+            padding: 40px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #222;
+        }
+        
+        header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        nav {
+            margin-top: 20px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        nav a:hover {
+            border-bottom-color: #333;
+        }
+        
+        main {
+            padding: 40px 0;
+        }
+        
+        section {
+            margin: 60px 0;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #222;
+            border-left: 4px solid #333;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            font-size: 1.4em;
+            margin: 30px 0 15px 0;
+            color: #333;
+        }
+        
+        h4 {
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+            color: #444;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .figure-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .figure-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .figure-caption {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 8px;
+            text-align: right;
+        }
+        
+        .section-divider {
+            padding: 40px 0;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .back-to-top {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 16px;
+            background-color: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        .back-to-top:hover {
+            background-color: #e0e0e0;
+            text-decoration: none;
+        }
+        
+        footer {
+            background-color: #f8f8f8;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+        
+        footer p {
+            margin: 10px 0;
+            color: #666;
+        }
+        
+        #intro {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        
+        .toc {
+            background-color: #f5f5f5;
+            padding: 20px 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .toc h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        
+        .toc ul {
+            margin-left: 20px;
+        }
+        
+        .toc a {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>理論の視覚的理解</h1>
+            <p>インフォグラフィックで学ぶ空間子と存在波理論</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="infographics.html">図解</a></li>
+                    <li><a href="about.html">著者について</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="intro">
+            <h2>はじめに</h2>
+            <p>空間子と存在波理論の核心概念を、6つのインフォグラフィックで視覚的に理解できます。各図は理論の異なる側面を説明しており、全体として統一的な物理描像を提供します。</p>
+            <p>これらの図は、現代物理学の「計算はできるが説明できない」という状況に対して、「なぜそうなるのか」という物理的メカニズムを明示することを目指しています。</p>
+        </section>
+
+        <div class="toc">
+            <h3>目次</h3>
+            <ul>
+                <li><a href="#hierarchy">図1：宇宙の真の階層構造</a></li>
+                <li><a href="#energy">図2：エネルギーという幻想</a></li>
+                <li><a href="#time">図3：時間の二重構造</a></li>
+                <li><a href="#force">図4：物質はなぜ動くのか</a></li>
+                <li><a href="#quantum">図5：量子力学の謎を解く</a></li>
+                <li><a href="#micro-macro">図6：ミクロとマクロの統合</a></li>
+            </ul>
+        </div>
+
+        <!-- 図1：階層構造 -->
+        <section id="hierarchy" class="section-divider">
+            <h2>図1：宇宙の真の階層構造</h2>
+            
+            <div class="figure-container">
+                <img src="images/hierarchy.jpg" 
+                     alt="宇宙の真の階層構造：空間子と存在波">
+                <p class="figure-caption">AI生成</p>
+            </div>
+            
+            <h3>説明</h3>
+            <p>空間子を基盤とし、存在波、原型、素粒子、原子・分子へと至る階層構造を示します。この図は理論全体の概要を提供し、物理的実在の本質を明らかにします。</p>
+            
+            <p>重要なのは、<strong>物理的実在は空間子のみ</strong>であるという点です。我々が「物質」や「光」と呼ぶものは、すべて空間子上の情報変動（存在波）として理解されます。</p>
+            
+            <h4>重要なポイント：</h4>
+            <ul>
+                <li><strong>空間子（Space Quantum）：</strong>プランク長立方（約10<sup>-35</sup>m）の空間を占有する唯一の物理的実在。情報を保持、伝達、処理する能力を持つ。</li>
+                <li><strong>存在波（Existence Wave）：</strong>空間子上の情報変動。すべての物理現象の正体。伝播型（光、力）と集合型（物質）に分類される。</li>
+                <li><strong>原型（Archetype）：</strong>集合型存在波が空間上に安定して留まるための特殊な条件。この条件を満たした存在波のみが「物質」として認識される。</li>
+                <li><strong>観測の限界：</strong>人類が観測できるのは存在波の挙動のみ。根本実在である空間子を直接観測することはできない。</li>
+            </ul>
+            
+            <p><strong>関連論文：</strong><a href="https://doi.org/10.5281/zenodo.15861248" target="_blank">第一論文（概念の全体像）</a></p>
+            
+            <a href="#intro" class="back-to-top">↑ トップへ戻る</a>
+        </section>
+
+        <!-- 図2：エネルギー -->
+        <section id="energy" class="section-divider">
+            <h2>図2：エネルギーという幻想</h2>
+            
+            <div class="figure-container">
+                <img src="images/energy-reconsidered.jpg" 
+                     alt="エネルギーという幻想：実体から記述へ">
+                <p class="figure-caption">AI生成</p>
+            </div>
+            
+            <h3>説明</h3>
+            <p>エネルギーは物理的実体ではなく、空間子の作用を数値化した記述概念です。この認識は、物理学におけるエネルギー概念を根本から再考させます。</p>
+            
+            <p>中央に示されたドップラー効果のパラドクスは決定的です。同じ光でも、観測者の運動状態によってエネルギーが異なって測定されます。もしエネルギーが実体なら、これは矛盾です。しかし、エネルギーを「空間子の作用の記述」として理解すれば、矛盾は消えます。</p>
+            
+            <h4>重要なポイント：</h4>
+            <ul>
+                <li><strong>従来理論：</strong>エネルギーは物理的な実体であり、物質や光が「持っている」もの。E=mc²は実体間の変換を表す。</li>
+                <li><strong>空間子理論：</strong>エネルギーは空間子が受けた存在波（情報）に対して出す「作用量」や「処理負荷」を数値化した概念。E=mc²は形態変化（集合型⇔伝播型）のコストを示す換算式。</li>
+                <li><strong>ドップラー効果：</strong>観測者の運動状態で同じ光のエネルギーが変わる。これはエネルギーが実体ではなく、観測者依存の記述であることの証拠。</li>
+                <li><strong>保存則の再解釈：</strong>エネルギー保存則は宇宙の基本法則ではなく、空間子の処理環境が均質な場合にのみ成り立つ局所ルール。一般相対論で破れるのはこのため。</li>
+            </ul>
+            
+            <p><strong>関連論文：</strong></p>
+            <ul>
+            <li><a href="https://doi.org/10.5281/zenodo.15878825" target="_blank">第二論文（質量）</a></li>
+            <li><a href="https://doi.org/10.5281/zenodo.17888365" target="_blank">第九論文（エネルギーとエントロピー）</a></li>
+            </ul>
+            <a href="#intro" class="back-to-top">↑ トップへ戻る</a>
+        </section>
+
+        <!-- 図3：時間 -->
+        <section id="time" class="section-divider">
+            <h2>図3：時間の二重構造</h2>
+            
+            <div class="figure-container">
+                <img src="images/time-duality.jpg" 
+                     alt="時間の二重構造：絶対時間と相対時間">
+                <p class="figure-caption">AI生成</p>
+            </div>
+            
+            <h3>説明</h3>
+            <p>時間には二つの層があります：空間子の処理クロック（絶対時間）と、我々が体験する時間（相対時間）。この二重構造により、特殊相対論と一般相対論の時間現象を統一的に説明できます。</p>
+            
+            <p>左側の絶対時間は、空間子が存在波を処理する際の不変の間隔（プランク時間）です。これは宇宙の真の時計であり、人類には観測不可能です。右側の相対時間は、存在波が空間子の作用を受けて変化する過程そのものであり、これが我々が「時間」として認識するものです。</p>
+            
+            <h4>重要なポイント：</h4>
+            <ul>
+                <li><strong>絶対時間：</strong>空間子が処理を行う最小時間単位（プランク時間 ≈ 5.4×10<sup>-44</sup>秒）。これは不変であり、宇宙の絶対的な処理クロック。</li>
+                <li><strong>相対時間：</strong>人類が「時間」として認識する進行。存在波が空間子の作用を受けて変化する過程そのもの。</li>
+                <li><strong>時間の遅れのメカニズム：</strong>空間子の「処理負荷」に応じて変化。質量、運動、重力などの負荷が大きいほど、存在波の進行（＝相対時間）は遅くなる。</li>
+                <li><strong>統一的説明：</strong>従来は特殊相対論（運動による時間の遅れ）と一般相対論（重力による時間の遅れ）で異なる説明だったが、空間子理論では「処理負荷」という単一の概念で統一的に説明。</li>
+            </ul>
+            
+            <p><strong>関連論文：</strong></p>
+            <ul>
+            <li><a href="https://doi.org/10.5281/zenodo.15878825" target="_blank">第二論文（相対論の再解釈）</a></li>
+            <li><a href="https://doi.org/10.5281/zenodo.17816964" target="_blank">第八論文（一般相対性理論における時空の歪み図の解釈）</a></li>
+            </ul>
+            <a href="#intro" class="back-to-top">↑ トップへ戻る</a>
+        </section>
+
+        <!-- 図4：力と運動 -->
+        <section id="force" class="section-divider">
+            <h2>図4：物質はなぜ動くのか</h2>
+            
+            <div class="figure-container">
+                <img src="images/why-matter-moves.jpg" 
+                     alt="物質はなぜ動くのか：力の3段階プロセス">
+                <p class="figure-caption">AI生成</p>
+            </div>
+            
+            <h3>説明</h3>
+            <p>物質は自ら動くのではなく、空間子によって動かされています。「力」とは、3段階のプロセスです：①物体からの「存在波」（情報）が発信される、②別の物体がその情報を受け取り「共鳴」する、③空間子がその応答に基づいて物体の位置を更新する。</p>
+            
+            <p>従来の物理学では「力」が物体を動かすと考えますが、空間子理論では「力」は情報の伝達であり、実際の運動実行は空間子が担います。物質はベルトコンベアに乗る荷物のようなもので、ベルトコンベア（空間子）が動かしているのです。</p>
+            
+            <h4>重要なポイント：</h4>
+            <ul>
+                <li><strong>従来の世界観：</strong>物体は自らの力（運動エネルギーや慣性の法則）で移動する。力は物体自身が持つ能力。</li>
+                <li><strong>新しい世界観：</strong>すべての存在は「空間子」によって動かされている。物質や光は自ら動く能力を持たず、空間子が位置を更新している。</li>
+                <li><strong>力の3段階プロセス：</strong>
+                    <ol>
+                        <li><strong>情報の発信：</strong>物体Aから「存在波」（情報）が発信・伝播される</li>
+                        <li><strong>応答・共鳴：</strong>物体Bがその情報を受け取り、「共鳴」する（近づくか離れるかを応答）</li>
+                        <li><strong>実行：</strong>空間子がその応答に基づき、物体の位置を調整する。この調整が「力」として観測される。</li>
+                    </ol>
+                </li>
+                <li><strong>ベルトコンベアの比喩：</strong>空間子が動力（ベルトコンベア）で、物質はそれに乗る荷物。荷物自体は動く能力を持たない。</li>
+            </ul>
+            
+            <p><strong>関連論文：</strong></p>
+            <ul>
+            <li><a href="https://doi.org/10.5281/zenodo.16731420" target="_blank">第五論文（重力と運動）</a></li>
+            <li><a href="https://doi.org/10.5281/zenodo.16744874" target="_blank">第六論文（物質と量子現象）</a></li>
+            </ul>
+            <a href="#intro" class="back-to-top">↑ トップへ戻る</a>
+        </section>
+
+        <!-- 図5：量子力学 -->
+        <section id="quantum" class="section-divider">
+            <h2>図5：量子力学の謎を解く</h2>
+            
+            <div class="figure-container">
+                <img src="images/quantum-mysteries.jpg" 
+                     alt="量子力学の謎を解く新視点：空間子と存在波">
+                <p class="figure-caption">AI生成</p>
+            </div>
+            
+            <h3>説明</h3>
+            <p>量子力学の「謎」の多くは、物質を固定された実体として扱うことから生じます。存在波として理解すれば、観測問題も波動性も粒子性も、自然に説明されます。</p>
+            
+            <p>上段の図は、宇宙の真の実体は「空間子」であり、万物は「存在波」という情報であることを示します。我々が「物質」と呼ぶものは、安定したパターンを形成した存在波（集合型存在波）です。下段の図は、量子力学が「現象」の数学的記述であること、「観測」とは測定器の存在波との物理的共鳴であることを示します。</p>
+            
+            <h4>重要なポイント：</h4>
+            <ul>
+                <li><strong>物質の正体：</strong>我々が「物質」と認識するものは、空間上に安定したパターンを形成した存在波（集合型存在波）である。</li>
+                <li><strong>波動性の説明：</strong>存在波という情報が空間子を伝わる様子が「波動性」として観測される。</li>
+                <li><strong>粒子性の説明：</strong>集合型存在波が原型条件を満たして空間上に留まる様子が「粒子性」として観測される。</li>
+                <li><strong>観測問題の再解釈：</strong>「観測」とは、対象の存在波と測定器の存在波が相互作用し「共鳴」する物理的プロセス。観測は常に対象に影響を与えるため、「観測前の状態」は原理的に知り得ない。</li>
+                <li><strong>量子力学の位置づけ：</strong>量子力学は存在波の挙動を数式で正確に記述するが、「なぜそうなるのか」を説明していない。空間子理論は、その背後にある物理的メカニズムを提供する。</li>
+            </ul>
+            
+            <p><strong>関連論文：</strong></p>
+            <ul>
+            <li><a href="https://doi.org/10.5281/zenodo.15861248" target="_blank">第一論文（概念の全体像）</a>
+            <li><a href="https://doi.org/10.5281/zenodo.16744874" target="_blank">第六論文（物質と量子現象）</a>
+            </ul>
+            <a href="#intro" class="back-to-top">↑ トップへ戻る</a>
+        </section>
+
+        <!-- 図6：ミクロとマクロ -->
+        <section id="micro-macro" class="section-divider">
+            <h2>図6：ミクロとマクロの統合</h2>
+            
+            <div class="figure-container">
+                <img src="images/micro-macro-integration.jpg" 
+                     alt="ミクロとマクロの統合：空間子と存在波理論が示す新しい宇宙像">
+                <p class="figure-caption">AI生成</p>
+            </div>
+            
+            <h3>説明</h3>
+            <p>現代物理学は、ミクロの世界（量子力学）とマクロの世界（相対論）が概念的に分断されています。量子力学では「量子化」と「確率」が支配し、相対論では「時空の歪み」が支配します。これらは数学的には両立しますが、統一的な物理描像を欠いています。</p>
+            
+            <p>空間子理論は、両者を「空間子」という離散的な実在と、その上を伝わる「存在波」という統一的概念で説明します。ミクロもマクロも、宇宙論も、すべて同じ原理から導かれます。</p>
+            
+            <h4>重要なポイント：</h4>
+            <ul>
+                <li><strong>現代物理学の概念的対立：</strong>
+                    <ul>
+                        <li>ミクロ：量子力学の不思議な「量子化」が支配</li>
+                        <li>マクロ：相対論的時空の「連続的な歪み」が支配</li>
+                    </ul>
+                </li>
+                <li><strong>空間子理論による統合：</strong>
+                    <ul>
+                        <li>空間：連続的な時空ではなく、離散的な「空間子」の集合</li>
+                        <li>物質：基本粒子ではなく、空間子上の安定した情報パターン「集合型存在波」</li>
+                        <li>質量：物質固有の性質ではなく、空間子の「処理負荷」</li>
+                        <li>重力：時空の歪みではなく、空間子ネットワークの「歪み化作用」</li>
+                    </ul>
+                </li>
+                <li><strong>根本的な矛盾の解消：</strong>
+                    <ul>
+                        <li>ブラックホールの特異点問題 → 特異点は物理的に存在せず、作用率0%の領域として理解される</li>
+                        <li>真空エネルギー問題 → 真空概念の再定義により、120桁の乖離が説明される</li>
+                    </ul>
+                </li>
+                <li><strong>統一的な宇宙像：</strong>離散的な空間子の集合として、ミクロからマクロ、宇宙論まで統一的に説明される。</li>
+            </ul>
+            
+            <p><strong>関連論文：</strong></p>
+            <ul>
+                <li><a href="https://doi.org/10.5281/zenodo.15878825" target="_blank">第二論文（質量）</a></li>
+                <li><a href="https://doi.org/10.5281/zenodo.16744874" target="_blank">第六論文（物質と量子現象）</a></li>
+                <li><a href="https://doi.org/10.5281/zenodo.17601017" target="_blank">第七論文（QFT 120桁問題）</a></li>
+                <li><a href="https://doi.org/10.5281/zenodo.17816964" target="_blank">第八論文（ブラックホール内部と特異点問題）</a></li>
+            </ul>
+            
+            <a href="#intro" class="back-to-top">↑ トップへ戻る</a>
+        </section>
+
+        <section id="download">
+            <h2>図版のご利用について</h2>
+            <p>各図は、個人的な学習目的であれば、右クリック → 画像を保存 でご利用いただけます。</p>
+            <p>学術発表、教育目的、出版物等での利用を希望される場合は、以下のクレジット表記をお願いいたします：</p>
+    <pre style="background-color: #f5f5f5; padding: 15px; border-left: 4px solid #333; overflow-x: auto;"><code>図版：須釜正行「空間子と存在波理論」
+https://sugamamasayuki.github.io/SpaceQuanta-and-ExistenceWaves/
+Generated by Google NotebookLM</code></pre>
+        </section>
+
+        <section id="more">
+            <h2>さらに詳しく学ぶ</h2>
+            <p>これらのインフォグラフィックで興味を持たれた方は、ぜひ<a href="index.html#publications">論文シリーズ</a>をご覧ください。10本の論文で、理論の詳細と数学的基盤を提供しています。</p>
+            <p style="text-align: center; margin: 30px 0;">
+                <a href="index.html#publications" style="display: inline-block; padding: 12px 24px; background-color: #333; color: white; text-decoration: none; border-radius: 4px;">論文一覧を見る →</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 須釜正行. All rights reserved.</p>
+            <p>Space Quanta and Existence Wave Theory - From Mathematical Success to Physical Understanding</p>
+            <p style="font-size: 0.9em; color: #999; margin-top: 20px;">
+                本ページのインフォグラフィックは、Google NotebookLMを使用して生成されました。<br>
+                <em>Infographics generated using Google NotebookLM.</em>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
